@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>BITE</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap, fontawesome, custom, responsive css -->
+	<link rel="icon" href="assets/icon.svg">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/all.min.css">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+	<div class="container">
+
+		<div class="header">
+			<a href="index.html"><h1 class="text-white text-center my-4 text-info text-uppercase brand"><i class="fas fa-drumstick-bite"></i> Bite</h1></a>
+			<div class="text-white display-text">
+				<h2 class="display-4 text-center header-text">Search for the Recipe of your favorite meal</h2>
+			</div>
+		</div>
+		
+		<!-- search field -->
+		<form id="form" class="form">
+			<div class="input-group">
+				<input type="text" class="form-control" id="input" placeholder="eg.. rice / egg / chicken / ice cream" required>
+				<button type="submit" class="btn btn-info submit-btn px-5"><i class="fas fa-search"></i></button>
+			</div>
+		</form>
+
+		<!-- modal for meal information -->
+		<div class="meal-info">
+			<div class="modal fade" id="meal-info-modal">
+				<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+					<div class="modal-content bg-dark text-white">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Meal Info</h5>
+						<button type="button" class="close text-white" data-dismiss="modal" aria-label="Close" onclick="resetModal()">
+						<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body" id="modal-body">
+						<div class="text-center py-4 mx-3">
+							<div class="spinner-border text-info" role="status">
+								<span class="sr-only">Loading...</span>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="resetModal()">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- for showing search result -->
+		<div class="loading hide" id="loading">
+			<div class="spinner-border text-info" role="status">
+				<span class="sr-only">Loading...</span>
+			</div>
+		</div>
+		<div class="text-white display-text text-center my-5 error" id="error">
+            <h2 class="display-4 text-danger">No result was found.</h2>
+            <p class="mt-1 text-secondary">Enter valid name or check Spelling</p>
+        </div>
+		<div class="search-result row">
+			
+		</div>
+		<div class="load-more-btn text-center my-4">
+			<button class="btn btn-outline-info hide" id="load-more">Load More</button>
+		</div>
+	</div>
+	
+<!-- Optional JavaScript -->
+<script src="assets/js/jquery-3.4.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
