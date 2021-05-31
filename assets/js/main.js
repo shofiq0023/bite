@@ -30,7 +30,11 @@ const fetchApi = async (inputValue, htmlAdd, previousResult, currentResult) => {
     let response = await fetch(baseUrl);
     let data = await response.json();
     loadingIcon.classList.add('hide');
-    loadMoreBtn.classList.remove('hide');
+    if(current < 100){
+        loadMoreBtn.classList.remove('hide');
+    } else {
+        loadMoreBtn.classList.add('hide');
+    }
     if(errorDiv.classList.contains('show')){
         errorDiv.classList.remove('show');
         errorDiv.classList.add('hide');
